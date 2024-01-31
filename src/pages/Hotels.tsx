@@ -1,5 +1,5 @@
 import { hotels } from "@/lib/hotels";
-import React from "react";
+// import React from "react";
 
 const Hotels = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   return (

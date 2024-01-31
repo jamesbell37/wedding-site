@@ -1,5 +1,5 @@
 import Carousel from "../components/Carousel";
-import React from "react";
+// import React from "react";
 import HotelImage from "../assets/hotel.jpeg";
 import { Link } from "react-router-dom";
 

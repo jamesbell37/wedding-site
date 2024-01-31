@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Image1 from "../assets/boda.jpeg";
 import Image2 from "../assets/boda2.jpeg";
 import Image3 from "../assets/boda3.jpeg";
@@ -15,13 +15,13 @@ const Carousel = () => {
     setActiveIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
-  }, []);
+  }, [images.length]);
 
-  const prevSlide = useCallback(() => {
-    setActiveIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  }, []);
+  //   const prevSlide = useCallback(() => {
+  //     setActiveIndex((prevIndex) =>
+  //       prevIndex === 0 ? images.length - 1 : prevIndex - 1
+  //     );
+  //   }, []);
 
   useEffect(() => {
     const autoPlayInterval = setInterval(nextSlide, 5000);
