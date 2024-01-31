@@ -9,7 +9,7 @@ type Props = {
 };
 
 const Navbar = ({ isMenuOpen, setIsMenuOpen }: Props) => {
-  const { i18n, t } = useTranslation();
+  const { i18n } = useTranslation();
 
   const onChangeLang = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const lang_code = e.target.value;
