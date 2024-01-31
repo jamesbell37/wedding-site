@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Home from "./pages/Home";
 import { useState } from "react";
@@ -13,6 +13,7 @@ function App() {
       <Routes>
         <Route path={"home"} element={<Home isMenuOpen={isMenuOpen} />} />
         <Route path={"hotels"} element={<Hotels isMenuOpen={isMenuOpen} />} />
+        <Route path="*" element={<Navigate to={"home"} replace />} />
       </Routes>
     </BrowserRouter>
   );

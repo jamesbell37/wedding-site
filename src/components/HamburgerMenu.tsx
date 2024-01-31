@@ -14,7 +14,6 @@ type Props = {
 const MobileNav = ({ isMenuOpen, setIsMenuOpen }: Props) => {
   const ref = useRef(null);
   const location = useLocation();
-  console.log(location);
 
   useClickAway(ref, () => setIsMenuOpen(false));
   return (

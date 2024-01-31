@@ -16,7 +16,10 @@ const Hotels = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
                 rel="noreferrer"
                 href={hotel.url}
               >
-                <img src={hotel.image} className="brightness-75 rounded-lg" />
+                <img
+                  src={hotel.image}
+                  className="brightness-75 rounded-lg h-[120px] w-full"
+                />
                 <span className="absolute top-1/4 w-full text-center text-white">
                   {hotel.name}
                 </span>

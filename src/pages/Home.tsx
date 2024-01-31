@@ -15,7 +15,7 @@ const Home = ({ isMenuOpen }: Props) => {
           <h2 className="text-center text-2xl">
             We are extremely excited for you to join us on this special day!
           </h2>
-          <p>
+          <p className={"text-center"}>
             We will see you on <strong>Friday, July 5th</strong> at 5PM at
             Iglesia de Galizano and afterwards at the celebration in{" "}
             <strong>Finca de San Juan, Castañeda</strong>
