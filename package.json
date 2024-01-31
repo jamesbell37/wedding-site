@@ -1,5 +1,5 @@
 {
-  "name": "vite-react-tailwind-starter",
+  "name": "wedding-site",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -11,13 +11,24 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
+    "add": "^2.0.6",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "framer-motion": "^11.0.3",
+    "google-auth-library": "^9.6.0",
+    "google-spreadsheet": "^4.1.1",
+    "googleapis": "^131.0.0",
+    "hamburger-react": "^2.5.0",
+    "i18next": "^23.8.2",
     "lucide-react": "^0.312.0",
     "react": "^18.2.0",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.3",
+    "react-use": "^17.5.0",
     "tailwind-merge": "^2.2.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "yarn": "^1.22.21"
   },
   "devDependencies": {
     "@types/node": "^20.11.5",

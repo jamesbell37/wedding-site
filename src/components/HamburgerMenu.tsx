@@ -1,0 +1,66 @@
+import React, { useRef } from "react";
+import { Link } from "react-router-dom";
+import { useClickAway } from "react-use";
+import { AnimatePresence, motion } from "framer-motion";
+import { Squash as Hamburger } from "hamburger-react";
+import { routes } from "@/lib/routes";
+
+type Props = {
+  isMenuOpen: boolean;
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const MobileNav = ({ isMenuOpen, setIsMenuOpen }: Props) => {
+  const ref = useRef(null);
+
+  useClickAway(ref, () => setIsMenuOpen(false));
+  return (
+    <>
+      <div>
+        <Hamburger toggled={isMenuOpen} size={20} toggle={setIsMenuOpen} />
+      </div>
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="z-[100] fixed left-0 right-0 top-[1.5rem] mt-5 p-5 h-full bg-white justify-center pt-0 border-b border-b-white/20"
+          >
+            <ul className="grid gap-2">
+              {routes.map((route, idx) => {
+                return (
+                  <motion.li
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 260,
+                      damping: 20,
+                      delay: 0.1 + idx / 10,
+                    }}
+                    key={route.title}
+                    className="w-full p-[0.08rem] rounded-xl"
+                  >
+                    <Link
+                      to={route.path}
+                      onClick={() => setIsMenuOpen((prev) => !prev)}
+                      className={
+                        "flex items-center justify-between w-full p-5 rounded-xl"
+                      }
+                    >
+                      <span className="flex gap-1 text-lg">{route.title}</span>
+                    </Link>
+                  </motion.li>
+                );
+              })}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
+
+export default MobileNav;

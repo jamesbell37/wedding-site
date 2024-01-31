@@ -1,20 +1,20 @@
-import { buttonVariants } from "./components/ui/button";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "./components/layout/Navbar";
+import Home from "./pages/Home";
+import { useState } from "react";
+import Hotels from "./pages/Hotels";
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen space-y-20">
-      <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
-        Vite, React, Tailwind minimal starter
-      </h1>
-      <a
-        href="https://github.com/moinulmoin/vite-react-tailwind-starter"
-        target="_blank"
-        rel="noreferrer"
-        className={buttonVariants()}
-      >
-        <span className="text-lg hover:underline underline-offset-2">Star on GitHub</span>
-      </a>
-    </main>
+    <BrowserRouter>
+      <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <Routes>
+        <Route path={"home"} element={<Home isMenuOpen={isMenuOpen} />} />
+        <Route path={"hotels"} element={<Hotels isMenuOpen={isMenuOpen} />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
