@@ -2,24 +2,21 @@ import Carousel from "../components/Carousel";
 // import React from "react";
 import HotelImage from "../assets/hotel.jpeg";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   isMenuOpen: boolean;
 };
 const Home = ({ isMenuOpen }: Props) => {
+  const { t } = useTranslation();
+
   return (
     !isMenuOpen && (
       <main className="flex flex-col gap-10 flex-1">
         <Carousel />
         <div className="flex flex-col gap-4 px-5">
-          <h2 className="text-center text-2xl">
-            We are extremely excited for you to join us on this special day!
-          </h2>
-          <p className={"text-center"}>
-            We will see you on <strong>Friday, July 5th</strong> at 5PM at
-            Iglesia de Galizano and afterwards at the celebration in{" "}
-            <strong>Finca de San Juan, Castañeda</strong>
-          </p>
+          <h2 className="text-center text-2xl">{t("home.title")}</h2>
+          <p className={"text-center"}>{t("home.body")}</p>
         </div>
         <span className={"px-5 relative"}>
           <Link to={"/hotels"}>
