@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
 import { routes } from "@/lib/routes";
 import classNames from "classnames";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   isMenuOpen: boolean;
@@ -14,6 +15,7 @@ type Props = {
 const MobileNav = ({ isMenuOpen, setIsMenuOpen }: Props) => {
   const ref = useRef(null);
   const location = useLocation();
+  const { t } = useTranslation();
 
   useClickAway(ref, () => setIsMenuOpen(false));
   return (
@@ -42,7 +44,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: Props) => {
                       damping: 20,
                       delay: 0.1 + idx / 10,
                     }}
-                    key={route.title}
+                    key={route.path}
                     className="w-full p-[0.08rem] rounded-xl"
                   >
                     <Link
@@ -56,7 +58,9 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: Props) => {
                         }
                       )}
                     >
-                      <span className="flex gap-1 text-lg">{route.title}</span>
+                      <span className="flex gap-1 text-lg">
+                        {t(`menu.${route.path}`)}
+                      </span>
                     </Link>
                   </motion.li>
                 );

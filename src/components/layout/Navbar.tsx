@@ -1,5 +1,7 @@
 import React from "react";
 import HamburgerMenu from "../HamburgerMenu";
+import { LANGUAGES } from "@/constants/languages";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   isMenuOpen: boolean;
@@ -7,6 +9,12 @@ type Props = {
 };
 
 const Navbar = ({ isMenuOpen, setIsMenuOpen }: Props) => {
+  const { i18n, t } = useTranslation();
+
+  const onChangeLang = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const lang_code = e.target.value;
+    i18n.changeLanguage(lang_code);
+  };
   return (
     <nav
       className={
@@ -14,7 +22,16 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }: Props) => {
       }
     >
       <span className={"text-lg"}>Richi & Cris</span>
-      <HamburgerMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <div className="flex flex-row gap-4">
+        <select defaultValue={"en"} onChange={onChangeLang}>
+          {LANGUAGES.map(({ code, label }) => (
+            <option key={code} value={code}>
+              {label}
+            </option>
+          ))}
+        </select>
+        <HamburgerMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      </div>
     </nav>
   );
 };

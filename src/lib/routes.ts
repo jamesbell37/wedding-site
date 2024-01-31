@@ -8,6 +8,10 @@ const routes = [
     title: "Hotels",
   },
   {
+    path: "fun",
+    title: "Things to do",
+  },
+  {
     path: "contact",
     title: "Contact",
   },

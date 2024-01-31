@@ -3,6 +3,7 @@ import Navbar from "./components/layout/Navbar";
 import Home from "./pages/Home";
 import { useState } from "react";
 import Hotels from "./pages/Hotels";
+import "./i18n";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
