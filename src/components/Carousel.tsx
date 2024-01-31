@@ -38,19 +38,21 @@ const Carousel = () => {
         &lt;
       </button> */}
       <AnimatePresence initial={false} mode="wait">
-        <motion.img
-          key={activeIndex}
-          src={images[activeIndex]}
-          alt={`Slide ${images[activeIndex]}`}
-          className={`w-screen h-${
-            isMobile ? "auto" : "500px"
-          } block rounded-xl`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
-          loading="lazy"
-        />
+        <motion.div className="min-h-[500px]">
+          <motion.img
+            key={activeIndex}
+            src={images[activeIndex]}
+            alt={`Slide ${images[activeIndex]}`}
+            className={`w-screen h-${
+              isMobile ? "auto" : "500px"
+            } block rounded-xl`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            loading="lazy"
+          />
+        </motion.div>
       </AnimatePresence>
       {/* <button
         onClick={nextSlide}
