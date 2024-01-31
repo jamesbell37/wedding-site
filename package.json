@@ -21,6 +21,7 @@
     "googleapis": "^131.0.0",
     "hamburger-react": "^2.5.0",
     "i18next": "^23.8.2",
+    "lodash": "^4.17.21",
     "lucide-react": "^0.312.0",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",

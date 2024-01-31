@@ -5,11 +5,13 @@ import Image3 from "../assets/boda3.jpeg";
 import Image4 from "../assets/boda4.jpeg";
 import Image5 from "../assets/boda5.jpeg";
 import { AnimatePresence, motion } from "framer-motion";
-import { isMobile } from "react-device-detect";
+import classNames from "classnames";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const Carousel = () => {
   const images = [Image1, Image2, Image3, Image4, Image5];
   const [activeIndex, setActiveIndex] = useState(0);
+  const isMobile = useIsMobile();
 
   const nextSlide = useCallback(() => {
     setActiveIndex((prevIndex) =>
@@ -38,14 +40,15 @@ const Carousel = () => {
         &lt;
       </button> */}
       <AnimatePresence initial={false} mode="wait">
-        <motion.div className="min-h-[500px]">
+        <motion.div className="flex min-h-[500px] justify-center">
           <motion.img
             key={activeIndex}
             src={images[activeIndex]}
             alt={`Slide ${images[activeIndex]}`}
-            className={`w-screen h-${
-              isMobile ? "auto" : "500px"
-            } block rounded-xl`}
+            className={classNames("block rounded-xl", {
+              "w-screen h-[500px]": isMobile,
+              "object-scale-down max-h-[500px] max-w-[500px]": !isMobile,
+            })}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
