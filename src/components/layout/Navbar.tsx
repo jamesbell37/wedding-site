@@ -21,7 +21,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }: Props) => {
         "flex flex-row justify-between items-center px-5 py-3 sticky bg-white rounded-b-xl top-0"
       }
     >
-      <span className={"text-lg"}>Richi & Cris</span>
+      <span className={"text-2xl"}>Richi & Cris</span>
       <div className="flex flex-row gap-4">
         <select defaultValue={"en"} onChange={onChangeLang}>
           {LANGUAGES.map(({ code, label }) => (

@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import { useState } from "react";
 import Hotels from "./pages/Hotels";
 import "./i18n";
+import Contact from "./pages/Contact";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path={"home"} element={<Home isMenuOpen={isMenuOpen} />} />
         <Route path={"hotels"} element={<Hotels isMenuOpen={isMenuOpen} />} />
+        <Route path={"contact"} element={<Contact isMenuOpen={isMenuOpen} />} />
         <Route path="*" element={<Navigate to={"home"} replace />} />
       </Routes>
     </BrowserRouter>

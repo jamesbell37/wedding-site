@@ -21,7 +21,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: Props) => {
   return (
     <>
       <div>
-        <Hamburger toggled={isMenuOpen} size={20} toggle={setIsMenuOpen} />
+        <Hamburger toggled={isMenuOpen} size={25} toggle={setIsMenuOpen} />
       </div>
       <AnimatePresence>
         {isMenuOpen && (
@@ -30,7 +30,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: Props) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="z-[100] fixed left-0 right-0 top-[1.5rem] mt-5 p-5 h-full bg-white justify-center pt-0 border-b-white/20"
+            className="z-[100] fixed left-0 right-0 top-[1.75rem] mt-5 p-5 h-full bg-white justify-center pt-0 border-b-white/20"
           >
             <ul className="grid gap-5 pt-5">
               {routes.map((route, idx) => {
@@ -42,26 +42,32 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: Props) => {
                       type: "spring",
                       stiffness: 260,
                       damping: 20,
-                      delay: 0.1 + idx / 10,
+                      delay: 0.1 + idx / 7,
                     }}
                     key={route.path}
                     className="w-full p-[0.08rem] rounded-xl"
                   >
-                    <Link
-                      to={route.path}
-                      onClick={() => setIsMenuOpen((prev) => !prev)}
-                      className={classNames(
-                        `flex items-center justify-between w-fit`,
-                        {
-                          "border-b-2 border-black":
-                            location.pathname === `/${route.path}`,
-                        }
-                      )}
-                    >
-                      <span className="flex gap-1 text-lg">
+                    {route.external ? (
+                      <a href={route.href} target="_blank" rel="noreferrer">
                         {t(`menu.${route.path}`)}
-                      </span>
-                    </Link>
+                      </a>
+                    ) : (
+                      <Link
+                        to={route.path}
+                        onClick={() => setIsMenuOpen((prev) => !prev)}
+                        className={classNames(
+                          `flex items-center justify-between w-fit`,
+                          {
+                            "border-b-2 border-black":
+                              location.pathname === `/${route.path}`,
+                          }
+                        )}
+                      >
+                        <span className="flex gap-1 text-lg">
+                          {t(`menu.${route.path}`)}
+                        </span>
+                      </Link>
+                    )}
                   </motion.li>
                 );
               })}

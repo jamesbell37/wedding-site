@@ -1,11 +1,12 @@
 import { hotels } from "@/lib/hotels";
-// import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Hotels = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
+  const { t } = useTranslation();
   return (
     !isMenuOpen && (
       <div className="flex flex-col flex-1 gap-10">
-        <div className={"font-bold text-xl px-5"}>Hotels</div>
+        <div className={"font-bold text-xl px-5"}>{t("hotels.title")}</div>
         <div className="px-1 grid grid-cols-2 gap-1">
           {hotels.map((hotel) => {
             return (
