@@ -21,10 +21,10 @@ const Home = ({ isMenuOpen }: Props) => {
           <p className="text-center">{t("home.body")}</p>
           <p>{t("home.info")}</p>
         </div>
-        <span className={"px-5 relative max-w-[500px]"}>
+        <span className={"relative max-w-[500px]"}>
           <Link to={"/hotels"}>
             <img src={HotelImage} className="rounded-lg brightness-50" />
-            <span className="absolute top-1/3 left-1/4 self-center text-white text-lg w-full text-center w-1/2">
+            <span className="absolute top-1/3 right-0 left-0  text-white text-lg text-center">
               {t("home.hotel_rec")}
             </span>
           </Link>
