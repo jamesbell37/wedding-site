@@ -3,7 +3,7 @@ import Carousel from "../components/Carousel";
 import HotelImage from "../assets/hotel.jpeg";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import useIsMobile from "@/hooks/useIsMobile";
+// import useIsMobile from "@/hooks/useIsMobile";
 
 type Props = {
   isMenuOpen: boolean;
