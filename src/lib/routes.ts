@@ -4,18 +4,28 @@ const routes = [
     title: "Home",
   },
   {
+    path: "ceremony",
+    title: "Ceremony",
+  },
+  {
+    path: "celebration",
+    title: "Celebration",
+  },
+  {
     path: "hotels",
-    title: "Hotels",
+    title: "Hotes",
   },
   {
-    path: "fun",
-    title: "Things to do",
+    path: "buses",
+    title: "Buses",
   },
   {
-    path: "rsvp",
-    title: "RSVP",
-    href: "https://www.youtube.com/",
-    external: true,
+    path: "taxis",
+    title: "Taxis",
+  },
+  {
+    path: "gifts",
+    title: "Gifts",
   },
   {
     path: "contact",

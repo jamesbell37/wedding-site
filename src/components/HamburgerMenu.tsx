@@ -47,27 +47,21 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: Props) => {
                     key={route.path}
                     className="w-full p-[0.08rem] rounded-xl"
                   >
-                    {route.external ? (
-                      <a href={route.href} target="_blank" rel="noreferrer">
+                    <Link
+                      to={route.path}
+                      onClick={() => setIsMenuOpen((prev) => !prev)}
+                      className={classNames(
+                        `flex items-center justify-between w-fit`,
+                        {
+                          "border-b-2 border-black":
+                            location.pathname === `/${route.path}`,
+                        }
+                      )}
+                    >
+                      <span className="flex gap-1 text-lg">
                         {t(`menu.${route.path}`)}
-                      </a>
-                    ) : (
-                      <Link
-                        to={route.path}
-                        onClick={() => setIsMenuOpen((prev) => !prev)}
-                        className={classNames(
-                          `flex items-center justify-between w-fit`,
-                          {
-                            "border-b-2 border-black":
-                              location.pathname === `/${route.path}`,
-                          }
-                        )}
-                      >
-                        <span className="flex gap-1 text-lg">
-                          {t(`menu.${route.path}`)}
-                        </span>
-                      </Link>
-                    )}
+                      </span>
+                    </Link>
                   </motion.li>
                 );
               })}

@@ -23,7 +23,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }: Props) => {
     >
       <span className={"text-2xl"}>Richi & Cris</span>
       <div className="flex flex-row gap-4">
-        <select defaultValue={"en"} onChange={onChangeLang}>
+        <select defaultValue={"es"} onChange={onChangeLang}>
           {LANGUAGES.map(({ code, label }) => (
             <option key={code} value={code}>
               {label}

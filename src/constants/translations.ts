@@ -2,11 +2,14 @@ const resources = {
   en: {
     translation: {
       menu: {
-        home: "Home",
+        home: "Info",
+        ceremony: "Ceremony",
+        celebration: "Celebration",
         hotels: "Hotels",
-        fun: "Things to do",
+        buses: "Buses",
+        taxis: "Taxis",
+        gifts: "Gifts",
         contact: "Contact",
-        rsvp: "RSVP",
       },
       home: {
         title:
@@ -17,31 +20,54 @@ const resources = {
       hotels: {
         title: "Hotels",
       },
+      taxis: {
+        title:
+          "We have compiled a list of taxi services in the area for your convenience",
+      },
       contact: {
-        title: "Contact us!",
+        title: `
+        If you have any doubts feel free to reach out.
+        We'd love to help out!
+        `,
       },
     },
   },
   es: {
     translation: {
       menu: {
-        home: "Inicio",
+        home: "Info",
+        ceremony: "Iglesia",
+        celebration: "Finca",
         hotels: "Alojamiento",
-        fun: "Diversion",
+        buses: "Autobuses",
+        taxis: "Taxis",
+        gifts: "Regalos",
         contact: "Contacto",
-        rsvp: "RSVP",
       },
       home: {
-        title:
-          "¡Nos hace mucha ilusión que nos acompañéis en este día tan especial!",
-        body: "Os esperamos el 5 de Julio de 2024 a las 17h en la Iglesia de Galizano (Cantabria) y en la posterior celebración en la finca de San Juan (Castañeda)",
+        title: "¡Nos casamos!",
+        body: "¡Estamos super felices y nos hace mucha ilusión que nos acompañéis en un día tan especial!",
+        info: `
+        Fecha: viernes 5 de julio de 2024.
+        Hora y lugar de la ceremonia: 17:00pm en la Iglesia de Nuestra Señora de la Asunción (calle verdes 145, 39160, Galizano, Cantabria).
+        Lugar de celebración: Finca de San Juan Hostería & Catering (Barrio de San Juan, s/n, 39660 Villabanez, Cantabria).
+        Mientras llega el gran día, hemos creado esta página web para que podáis tener toda la información que necesitáis.
+        Confirmadnos lo antes posible por favor, que así organizarlo todo nos será mucho más fácil.
+        ¡Nos vemos muy pronto!
+        Cristina & Ricardo`,
         hotel_rec: "Nuestras recomendaciones de alojamiento",
       },
       hotels: {
         title: "Alojamiento",
       },
+      taxis: {
+        title:
+          "Hemos recopilado una lista de servicios de taxi de la zona para su comodidad.",
+      },
       contact: {
-        title: "¡Contactanos!",
+        title: `
+        Si tienes cualquier duda, no dudes en contactar con nosotros.
+        Estaremos encantados de ayudarte en todo lo que necesites.`,
       },
     },
   },
