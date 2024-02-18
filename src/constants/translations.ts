@@ -12,9 +12,16 @@ const resources = {
         contact: "Contact",
       },
       home: {
-        title:
-          "We are extremely excited for you to join us on this special day!",
-        body: "We will see you on Friday, July 5th at 5PM at Iglesia de Galizano (Cantabria) and afterwards at the celebration in Finca de San Juan (Castañeda)",
+        title: "We're getting married!",
+        body: "We are extremely excited for you to join us on this special day!",
+        info: `
+        Date: Friday July 5th, 2024.
+        Time and Place: 5:00pm in Iglesia de Nuestra Señora de la Asunción (calle verdes 145, 39160, Galizano, Cantabria).
+        Reception: Finca de San Juan Hostería & Catering (Barrio de San Juan, s/n, 39660 Villabanez, Cantabria).
+        While we wait for this special day, we've created this site to provide all the info you may need.
+        We will appreciate if you could please RSVP as soon as possible!
+        See you soon!
+        Cristina & Ricardo`,
         hotel_rec: "Our hotel recommendations",
       },
       hotels: {
@@ -23,6 +30,18 @@ const resources = {
       taxis: {
         title:
           "We have compiled a list of taxi services in the area for your convenience",
+      },
+      gifts: {
+        title: `Thank you for sharing this very special day with us. 
+        Our most valued gift is your presence with us, but if you'd like to help us start our lives, we will be forever grateful.`,
+        int_transfer:
+          "If you are making an international transfer, you will also need the following",
+        int_transfer_details: `
+          COUNTRY: Spain
+          Currency: Euro
+          Swift/BIC Code (Openbank): OPENESMM
+          ABA Number (Openbank): 0073
+          `,
       },
       contact: {
         title: `
@@ -63,6 +82,18 @@ const resources = {
       taxis: {
         title:
           "Hemos recopilado una lista de servicios de taxi de la zona para su comodidad.",
+      },
+      gifts: {
+        title: `Gracias por estar a nuestro lado en un día tan importante para nosotros. 
+        Nuestro mejor regalo es que podáis venir, aún así, si queréis ayudarnos a empezar nuestra vida juntos, os lo agradeceremos siempre.`,
+        int_transfer:
+          "Si vas a realizar una transferencia internacional, también necesitarás esto",
+        int_transfer_details: `
+          PAÍS: España
+          MONEDA: Euro
+          CÓDIGO SWIFT/BIC (Openbank): OPENESMM
+          NÚMERO ABA (Openbank): 0073
+          `,
       },
       contact: {
         title: `

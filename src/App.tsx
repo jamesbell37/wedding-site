@@ -6,6 +6,7 @@ import Hotels from "./pages/Hotels";
 import "./i18n";
 import Contact from "./pages/Contact";
 import Taxis from "./pages/Taxis";
+import Gifts from "./pages/Gifts";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -17,6 +18,7 @@ function App() {
         <Route path={"home"} element={<Home isMenuOpen={isMenuOpen} />} />
         <Route path={"hotels"} element={<Hotels isMenuOpen={isMenuOpen} />} />
         <Route path={"taxis"} element={<Taxis isMenuOpen={isMenuOpen} />} />
+        <Route path={"gifts"} element={<Gifts isMenuOpen={isMenuOpen} />} />
         <Route path={"contact"} element={<Contact isMenuOpen={isMenuOpen} />} />
         <Route path="*" element={<Navigate to={"home"} replace />} />
       </Routes>
