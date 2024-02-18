@@ -10,7 +10,7 @@ type Props = {
 };
 const Home = ({ isMenuOpen }: Props) => {
   const { t } = useTranslation();
-  const isMobile = useIsMobile();
+  // const isMobile = useIsMobile();
 
   return (
     !isMenuOpen && (

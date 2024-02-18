@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import Image from "../assets/boda.jpeg";
 import { useTranslation } from "react-i18next";
 
