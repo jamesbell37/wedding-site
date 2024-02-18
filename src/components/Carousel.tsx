@@ -19,12 +19,6 @@ const Carousel = () => {
     );
   }, [images.length]);
 
-  //   const prevSlide = useCallback(() => {
-  //     setActiveIndex((prevIndex) =>
-  //       prevIndex === 0 ? images.length - 1 : prevIndex - 1
-  //     );
-  //   }, []);
-
   useEffect(() => {
     const autoPlayInterval = setInterval(nextSlide, 5000);
     return () => {
@@ -33,18 +27,11 @@ const Carousel = () => {
   }, [nextSlide]);
   return (
     <div className="max-w-full overflow-hidden">
-      {/* <button
-        onClick={prevSlide}
-        className="absolute top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white text-1.5rem border-none p-2 z-1 cursor-pointer transition duration-300 hover:bg-opacity-80 left-0"
-      >
-        &lt;
-      </button> */}
       <AnimatePresence initial={false} mode="wait">
         <motion.div className="flex min-h-[500px] justify-center">
           <motion.img
             key={activeIndex}
             src={images[activeIndex]}
-            alt={`Slide ${images[activeIndex]}`}
             className={classNames("block rounded-xl", {
               "w-screen h-[500px]": isMobile,
               "object-scale-down max-h-[500px] max-w-[500px]": !isMobile,
@@ -57,12 +44,6 @@ const Carousel = () => {
           />
         </motion.div>
       </AnimatePresence>
-      {/* <button
-        onClick={nextSlide}
-        className="absolute top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white text-1.5rem border-none p-2 cursor-pointer z-0 transition duration-300 hover:bg-opacity-80 right-0"
-      >
-        &gt;
-      </button> */}
     </div>
   );
 };

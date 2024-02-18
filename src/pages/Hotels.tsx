@@ -1,17 +1,27 @@
 import { hotels } from "@/lib/hotels";
 import { useTranslation } from "react-i18next";
+import useIsMobile from "@/hooks/useIsMobile";
+import classNames from "classnames";
 
 const Hotels = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   const { t } = useTranslation();
+  const isMobile = useIsMobile();
+  console.log(isMobile);
+
   return (
     !isMenuOpen && (
       <div className="flex flex-col flex-1 gap-10">
         <div className={"font-bold text-xl px-5"}>{t("hotels.title")}</div>
-        <div className="px-1 grid grid-cols-2 gap-1">
-          {hotels.map((hotel) => {
+        <div
+          className={classNames(`px-1 gap-1`, {
+            "grid grid-cols-2": isMobile,
+            "grid grid-cols-4": !isMobile,
+          })}
+        >
+          {hotels.map((hotel, index) => {
             return (
               <a
-                key={hotel.url}
+                key={index}
                 className="relative"
                 target="_blank"
                 rel="noreferrer"
