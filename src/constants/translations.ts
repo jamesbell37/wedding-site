@@ -38,6 +38,13 @@ const resources = {
       hotels: {
         title: "Hotels",
       },
+      buses: {
+        title: "Buses",
+        body: `
+        We will offer a bus transport service that will take you to the ceremony in Iglesia de Nuestra Señora de la Asunción, and then to the reception at Finca de San Juan. Once the celebration is finished, there will be bus service to return.
+
+        In the coming weeks we will publish the bus stops and times.`,
+      },
       taxis: {
         title:
           "We have compiled a list of taxi services in the area for your convenience",
@@ -100,6 +107,13 @@ const resources = {
       },
       hotels: {
         title: "Alojamiento",
+      },
+      buses: {
+        title: "Autobuses",
+        body: `
+        Ofreceremos un servicio de autobuses que os llevarán primero a la Iglesia de Nuestra Señora de la Asunción (calle verdes 145, 39160, Galizano, Cantabria), y luego a la Finca de San Juan (barrio de San Juan, s/n, 39660 Villabanez, Cantabria). Una vez terminada la celebración, habrá autobuses de vuelta.
+
+        En las próximas semanas publicaremos el horario y las paradas del servicio de autobuses.`,
       },
       taxis: {
         title:
