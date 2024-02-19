@@ -3,6 +3,7 @@ import HamburgerMenu from "../HamburgerMenu";
 import { LANGUAGES } from "@/constants/languages";
 import { useTranslation } from "react-i18next";
 import classNames from "classnames";
+import { Link } from "react-router-dom";
 
 type Props = {
   isMenuOpen: boolean;
@@ -25,7 +26,9 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }: Props) => {
         }
       )}
     >
-      <span className={"text-2xl font-extrabold"}>Richi & Cris</span>
+      <Link to={"/"} className={"text-2xl font-extrabold"}>
+        Richi & Cris
+      </Link>
       <div className="flex flex-row gap-4">
         <select defaultValue={"es"} onChange={onChangeLang}>
           {LANGUAGES.map(({ code, label }) => (
