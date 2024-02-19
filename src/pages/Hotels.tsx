@@ -10,7 +10,7 @@ const Hotels = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
 
   return (
     !isMenuOpen && (
-      <div className="flex flex-col flex-1 gap-10">
+      <div className="flex flex-col flex-1 gap-10 bg-off-white">
         <div className={"font-bold text-xl px-5"}>{t("hotels.title")}</div>
         <div
           className={classNames(`px-1 gap-1`, {

@@ -2,6 +2,7 @@ import React from "react";
 import HamburgerMenu from "../HamburgerMenu";
 import { LANGUAGES } from "@/constants/languages";
 import { useTranslation } from "react-i18next";
+import classNames from "classnames";
 
 type Props = {
   isMenuOpen: boolean;
@@ -17,9 +18,12 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }: Props) => {
   };
   return (
     <nav
-      className={
-        "flex flex-row justify-between items-center px-5 py-3 sticky bg-white rounded-b-xl top-0"
-      }
+      className={classNames(
+        "flex flex-row justify-between items-center px-5 py-3 sticky bg-white rounded-b-xl top-0",
+        {
+          "drop-shadow-md": !isMenuOpen,
+        }
+      )}
     >
       <span className={"text-2xl font-extrabold"}>Richi & Cris</span>
       <div className="flex flex-row gap-4">

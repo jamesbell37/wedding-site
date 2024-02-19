@@ -8,7 +8,7 @@ const Celebration = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
     !isMenuOpen && (
       <div
         className={
-          "relative flex flex-1 flex-col gap-10  h-fit items-center whitespace-pre-line"
+          "relative flex flex-1 flex-col gap-10  h-fit items-center whitespace-pre-line bg-off-white h-screen"
         }
       >
         <img

@@ -23,6 +23,7 @@ module.exports = {
         sans: ['"Josefin Slab"', ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        "off-white": "	#FAF9F6",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
