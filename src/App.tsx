@@ -7,6 +7,8 @@ import "./i18n";
 import Contact from "./pages/Contact";
 import Taxis from "./pages/Taxis";
 import Gifts from "./pages/Gifts";
+import Church from "./pages/Church";
+import Celebration from "./pages/Celebration";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -16,6 +18,11 @@ function App() {
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <Routes>
         <Route path={"home"} element={<Home isMenuOpen={isMenuOpen} />} />
+        <Route path={"ceremony"} element={<Church isMenuOpen={isMenuOpen} />} />
+        <Route
+          path={"celebration"}
+          element={<Celebration isMenuOpen={isMenuOpen} />}
+        />
         <Route path={"hotels"} element={<Hotels isMenuOpen={isMenuOpen} />} />
         <Route path={"taxis"} element={<Taxis isMenuOpen={isMenuOpen} />} />
         <Route path={"gifts"} element={<Gifts isMenuOpen={isMenuOpen} />} />

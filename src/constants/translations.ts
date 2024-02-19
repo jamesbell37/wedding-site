@@ -1,6 +1,9 @@
 const resources = {
   en: {
     translation: {
+      common: {
+        view: "view",
+      },
       menu: {
         home: "Info",
         ceremony: "Ceremony",
@@ -23,6 +26,14 @@ const resources = {
         See you soon!
         Cristina & Ricardo`,
         hotel_rec: "Our hotel recommendations",
+      },
+      church: {
+        title: `Church`,
+        location: "Location",
+      },
+      celebration: {
+        title: `Reception`,
+        location: "Location",
       },
       hotels: {
         title: "Hotels",
@@ -53,6 +64,9 @@ const resources = {
   },
   es: {
     translation: {
+      common: {
+        view: "ver",
+      },
       menu: {
         home: "Info",
         ceremony: "Iglesia",
@@ -75,6 +89,14 @@ const resources = {
         ¡Nos vemos muy pronto!
         Cristina & Ricardo`,
         hotel_rec: "Nuestras recomendaciones de alojamiento",
+      },
+      church: {
+        title: `Iglesia`,
+        location: "Localización",
+      },
+      celebration: {
+        title: `Finca`,
+        location: "Localización",
       },
       hotels: {
         title: "Alojamiento",
