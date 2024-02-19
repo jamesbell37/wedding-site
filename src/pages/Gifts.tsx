@@ -11,7 +11,7 @@ const Gifts = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
     !isMenuOpen && (
       <div
         className={
-          "flex flex-1 flex-col gap-10  h-fit items-center whitespace-pre-line bg-off-white"
+          "flex flex-1 flex-col gap-10  h-fit items-center whitespace-pre-line bg-off-white h-screen"
         }
       >
         <img

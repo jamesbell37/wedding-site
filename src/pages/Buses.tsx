@@ -6,7 +6,7 @@ const Buses = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   const { t } = useTranslation();
   return (
     !isMenuOpen && (
-      <div className="flex flex-col flex-1 px-5 whitespace-pre-line bg-off-white">
+      <div className="flex flex-col flex-1 px-5 whitespace-pre-line bg-off-white h-screen">
         <div className="text-xl font-bold">{t("buses.title")}</div>
         <span>{t("buses.body")}</span>
         <img

@@ -4,7 +4,7 @@ const Taxis = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   const { t } = useTranslation();
   return (
     !isMenuOpen && (
-      <div className="flex flex-col flex-1 gap-5 px-5 bg-off-white">
+      <div className="flex flex-col flex-1 gap-5 px-5 bg-off-white h-screen">
         <div className="text-xl font-bold">Taxis</div>
         <div className={"text-md"}>{t("taxis.title")}</div>
         <ul className="list-disc px-5">
