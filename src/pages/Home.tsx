@@ -17,9 +17,11 @@ const Home = ({ isMenuOpen }: Props) => {
       <main className="flex flex-col gap-10 flex-1 pb-10 items-center whitespace-pre-line">
         <Carousel />
         <div className="flex flex-col gap-4 px-5">
-          <h2 className="text-center text-2xl">{t("home.title")}</h2>
+          <h2 className="text-center text-2xl font-semibold">
+            {t("home.title")}
+          </h2>
           <p className="text-center">{t("home.body")}</p>
-          <p>{t("home.info")}</p>
+          <p dangerouslySetInnerHTML={{ __html: t("home.info") }}></p>
         </div>
         <span className={"relative max-w-[500px]"}>
           <Link to={"/hotels"}>
