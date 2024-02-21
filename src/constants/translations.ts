@@ -3,6 +3,7 @@ const resources = {
     translation: {
       common: {
         view: "view",
+        rsvp: "Click to RSVP",
       },
       menu: {
         home: "Info",
@@ -78,6 +79,7 @@ const resources = {
     translation: {
       common: {
         view: "ver",
+        rsvp: "Confirmar asistencia",
       },
       menu: {
         home: "Info",

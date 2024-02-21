@@ -6,6 +6,7 @@ import { Squash as Hamburger } from "hamburger-react";
 import { routes } from "@/lib/routes";
 import classNames from "classnames";
 import { useTranslation } from "react-i18next";
+import RSVPButton from "./RSVPButton";
 
 type Props = {
   isMenuOpen: boolean;
@@ -65,6 +66,19 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: Props) => {
                   </motion.li>
                 );
               })}
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 20,
+                  delay: 0.1 + (routes.length + 1) / 7,
+                }}
+                className="w-full p-[0.08rem] rounded-xl"
+              >
+                <RSVPButton />
+              </motion.div>
             </ul>
           </motion.div>
         )}

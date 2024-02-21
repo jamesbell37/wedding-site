@@ -1,16 +1,14 @@
 import Carousel from "../components/Carousel";
-// import React from "react";
 import HotelImage from "../assets/hotel.jpeg";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-// import useIsMobile from "@/hooks/useIsMobile";
+import RSVPButton from "@/components/RSVPButton";
 
 type Props = {
   isMenuOpen: boolean;
 };
 const Home = ({ isMenuOpen }: Props) => {
   const { t } = useTranslation();
-  // const isMobile = useIsMobile();
 
   return (
     !isMenuOpen && (
@@ -22,6 +20,9 @@ const Home = ({ isMenuOpen }: Props) => {
           </h2>
           <p className="text-center">{t("home.body")}</p>
           <p dangerouslySetInnerHTML={{ __html: t("home.info") }}></p>
+          <div className="self-center w-fit">
+            <RSVPButton />
+          </div>
         </div>
         <span className={"relative max-w-[500px]"}>
           <Link to={"/hotels"}>
