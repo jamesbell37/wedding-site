@@ -31,7 +31,10 @@ const HotelGrid = ({ title, zone }: Props) => {
               >
                 <img
                   src={hotel.image}
-                  className="brightness-75 rounded-lg h-[120px] w-full"
+                  className={classNames("brightness-75 rounded-lg w-full", {
+                    "h-[120px]": isMobile,
+                    "h-[150px]": !isMobile,
+                  })}
                 />
                 <span className="absolute top-1/3 w-full text-center text-white">
                   {hotel.name}

@@ -11,14 +11,14 @@ const hotels = [
     image:
       "https://media.er2.co/es/cantabria/51baf7c724ba3/1600/51bb01f1dd0f9.jpg",
     zone: 1,
-    url: "http://www.posadalacapia.com/",
+    url: "https://www.escapadarural.com/casa-rural/cantabria/hospederia-santa-cruz",
   },
   {
     name: "Posada La Capia",
     image:
       "https://www.cantabriarural.com/wp-content/uploads/PosadaLaCapia-cantabriarural-2.jpg",
     zone: 1,
-    url: "https://www.escapadarural.com/casa-rural/cantabria/hospederia-santa-cruz",
+    url: "http://www.posadalacapia.com/",
   },
   {
     name: "Gran Hotel Balneario de Puente Viesgo",
