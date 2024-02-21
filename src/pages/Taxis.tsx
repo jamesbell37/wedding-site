@@ -6,7 +6,7 @@ const Taxis = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   return (
     !isMenuOpen && (
       <div className="flex flex-col flex-1 gap-5 px-5 bg-off-white h-screen">
-        <div className="text-xl font-bold">Taxis</div>
+        <div className="text-2xl pt-5 font-bold">Taxis</div>
         <div className={"text-md"}>{t("taxis.title")}</div>
         <ul className="list-disc px-5">
           <li>Pide Taxi Cantabria ({prefix}942333333)</li>

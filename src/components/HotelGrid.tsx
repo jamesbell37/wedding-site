@@ -11,7 +11,7 @@ const HotelGrid = ({ title, zone }: Props) => {
 
   return (
     <div className={"flex flex-col gap-3"}>
-      <span className="px-5">{title}</span>
+      <span className="px-5 text-xl">{title}</span>
       <div
         className={classNames(`px-1 gap-1`, {
           "grid grid-cols-2": isMobile,

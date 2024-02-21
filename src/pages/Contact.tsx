@@ -16,21 +16,21 @@ const Contact = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
           src={Image}
         />
         <div className="absolute flex flex-col w-full self-end text-center items-center text-white">
-          <div className={"text-md font-bold pb-5 w-fit"}>
+          <div className={"text-lg font-bold pb-5 w-fit"}>
             {t("contact.title")}
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex flex-col">
-              <span className="text-md">Cristina</span>
-              <span className="text-xs">Phone: +34 611 09 93 47</span>
-              <span className="text-xs">
+              <span className="text-lg">Cristina</span>
+              <span className="text-sm">Phone: +34 611 09 93 47</span>
+              <span className="text-sm">
                 Email: cristina.bell.ssm@gmail.com
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="text-md">Ricardo</span>
-              <span className="text-xs">Phone: +34 606 83 54 23</span>
-              <span className="text-xs">Email: rcerrillo95@gmail.com</span>
+              <span className="text-lg">Ricardo</span>
+              <span className="text-sm">Phone: +34 606 83 54 23</span>
+              <span className="text-sm">Email: rcerrillo95@gmail.com</span>
             </div>
           </div>
         </div>

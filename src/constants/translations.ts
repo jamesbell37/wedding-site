@@ -39,6 +39,9 @@ const resources = {
       },
       hotels: {
         title: "Hotels",
+        zone1: "Zone 1: Near the Celebration",
+        zone2: "Zone 2: In the City",
+        zone3: "Zone 3: Near the Church",
       },
       buses: {
         title: "Buses",
@@ -111,6 +114,9 @@ const resources = {
       },
       hotels: {
         title: "Alojamiento",
+        zone1: "Zona 1: Alrededores de la finca",
+        zone2: "Zona 2: En la ciudad",
+        zone3: "Zona 3: Alrededores de la iglesia",
       },
       buses: {
         title: "Autobuses",
