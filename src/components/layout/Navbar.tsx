@@ -20,7 +20,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }: Props) => {
   return (
     <nav
       className={classNames(
-        "flex flex-row justify-between items-center px-5 py-3 sticky bg-white rounded-b-xl top-0",
+        "flex flex-row justify-between items-center px-5 py-3 sticky bg-white rounded-b-xl top-0 z-[100]",
         {
           "drop-shadow-md": !isMenuOpen,
         }
