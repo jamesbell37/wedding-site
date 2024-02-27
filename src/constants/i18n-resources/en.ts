@@ -21,12 +21,14 @@ export default {
         <strong>Date</strong>: Friday July 5th, 2024.
         <strong>Time and Place</strong>: 5:00pm in Iglesia de Nuestra Señora de la Asunción (calle verdes 145, 39160, Galizano, Cantabria).
         <strong>Reception</strong>: Finca de San Juan Hostería & Catering (Barrio de San Juan, s/n, 39660 Villabanez, Cantabria).
+        <strong>Dress code</strong>: Formal (men: suit & tie)
 
         While we wait for this special day, Cristina's amazing brother James created this site to provide all the info you may need.
-        We will appreciate if you could please RSVP as soon as possible!
+        
+        We will appreciate if you could please RSVP <strong>before April 15th</strong>!
         
         See you soon!
-        Cristina & Ricardo`,
+        Cris & Richi`,
       hotel_rec: "Our hotel recommendations",
     },
     church: {
@@ -40,8 +42,9 @@ export default {
     hotels: {
       title: "Hotels",
       zone1: "Zone 1: Near the Celebration",
-      zone2: "Zone 2: In the City",
-      zone3: "Zone 3: Near the Church",
+      zone2: "Zone 1: In Santander City",
+      zone3: "Zone 2: Near the Church",
+      info: "* To reserve in hotel Vijanera (zone 2), call +34 942 505 373 and say you are a guest of the wedding of Cristina Bell & Ricardo Cerrillo",
     },
     buses: {
       title: "Buses",

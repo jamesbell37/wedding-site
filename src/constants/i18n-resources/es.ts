@@ -23,10 +23,11 @@ export default {
         <strong>Lugar de celebración</strong>: Finca de San Juan Hostería & Catering (<a style="text-decoration:underline;" rel="noreferrer" target="_blank" href="https://maps.app.goo.gl/ASTmheeSVEdpWMuu8">Barrio de San Juan, s/n, 39660 Villabanez, Cantabria</a>).
         
         Mientras llega el gran día, hemos creado esta página web para que podáis tener toda la información que necesitáis.
+
         Confirmadnos lo antes posible por favor, que así organizarlo todo nos será mucho más fácil.
         
         ¡Nos vemos muy pronto!
-        Cristina & Ricardo`,
+        Cris & Richi`,
       hotel_rec: "Nuestras recomendaciones de alojamiento",
     },
     church: {
@@ -40,8 +41,9 @@ export default {
     hotels: {
       title: "Alojamiento",
       zone1: "Zona 1: Alrededores de la finca",
-      zone2: "Zona 2: En la ciudad",
-      zone3: "Zona 3: Alrededores de la iglesia",
+      zone2: "Zona 1: En Santander ciudad",
+      zone3: "Zona 2: Alrededores de la iglesia",
+      info: "* Para reservar en el hotel Vijanera, llama a 942 505 373 y di que eres invitado de la boda de Cristina Bell & Ricardo Cerrillo",
     },
     buses: {
       title: "Autobuses",
@@ -55,7 +57,7 @@ export default {
         "Hemos recopilado una lista de servicios de taxi de la zona para su comodidad.",
     },
     gifts: {
-      title: `Gracias por estar a nuestro lado en un día tan importante para nosotros. 
+      title: `Gracias por formar parte de un día tan importante para nosotros. 
         Nuestro mejor regalo es que podáis venir, aún así, si queréis ayudarnos a empezar nuestra vida juntos, os lo agradeceremos siempre.`,
       int_transfer:
         "Si vas a realizar una transferencia internacional, también necesitarás esto",

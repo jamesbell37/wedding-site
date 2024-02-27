@@ -14,20 +14,17 @@ const Gifts = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
           "flex flex-1 flex-col gap-10  h-fit items-center whitespace-pre-line bg-off-white h-screen"
         }
       >
-        <img
-          className="relative h-[400px] brightness-75 rounded-2xl"
-          src={Image}
-        />
-        <div className="absolute flex flex-col w-full self-end text-center items-center text-white pt-5">
+        <img className="relative w-screen brightness-50 " src={Image} />
+        <div className="absolute flex flex-col w-full self-end text-center items-center text-white pt-5 top-1/4">
           <div
             className={classNames("text-sm pb-5", {
               "w-1/2": !isMobile,
-              "w-fit": isMobile,
+              "w-fit px-8": isMobile,
             })}
           >
             {t("gifts.title")}
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col px-3">
             <div className="flex flex-col">
               <span className="text-xs font-bold">
                 IBAN: ES29 0073 0100 5105 9305 4980{" "}

@@ -9,11 +9,11 @@ const Hotels = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
 
   return (
     !isMenuOpen && (
-      <div className="flex flex-col flex-1 gap-10 bg-off-white h-screen">
+      <div className="flex flex-col flex-1 gap-5 bg-off-white h-screen">
         <div className={"font-bold  px-5 pt-5 text-2xl"}>
           {t("hotels.title")}
         </div>
-        <HotelGrid title={t("hotels.zone1")} zone={1} />
+        <div className="text-sm px-5">{t("hotels.info")}</div>
         <HotelGrid title={t("hotels.zone2")} zone={2} />
         <HotelGrid title={t("hotels.zone3")} zone={3} />
       </div>

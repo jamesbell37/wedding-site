@@ -20,13 +20,10 @@ const Celebration = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
             <span className={"text-xl font-bold "}>
               {t("celebration.title")}
             </span>
-            <a
-              className="text-lg font-medium flex flex-row gap-2 items-center "
-              href="https://www.fincadesanjuan.es/"
-            >
-              Finca de San Juan{" "}
-              <span className="underline text-xs">{t("common.view")}</span>
-            </a>
+            <div className="flex flex-col">
+              <span>Finca de San Juan</span>
+              <span>Hosteria & Catering</span>
+            </div>
           </div>
           <div className="flex flex-col gap-2">
             <span className="text-xl font-bold">

@@ -27,7 +27,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }: Props) => {
       )}
     >
       <Link to={"/"} className={"text-2xl font-extrabold"}>
-        Richi & Cris
+        Cris & Richi
       </Link>
       <div className="flex flex-row gap-4">
         <select defaultValue={"es"} onChange={onChangeLang}>
