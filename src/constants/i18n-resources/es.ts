@@ -62,6 +62,7 @@ export default {
       int_transfer:
         "Si vas a realizar una transferencia internacional, también necesitarás esto",
       int_transfer_details: `
+          DIRECCIÓN: Calle Paseo de la Castellana 134, 28046, Madrid, España
           PAÍS: España
           MONEDA: Euro
           CÓDIGO SWIFT/BIC (Openbank): OPENESMM
