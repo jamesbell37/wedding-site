@@ -63,6 +63,7 @@ export default {
       int_transfer:
         "If you are making an international transfer, you will also need the following",
       int_transfer_details: `
+          BANK ADDRESS: Calle Paseo de la Castellana 134, 28046, Madrid, España
           COUNTRY: Spain
           Currency: Euro
           Swift/BIC Code (Openbank): OPENESMM
