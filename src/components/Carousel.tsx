@@ -4,12 +4,13 @@ import Image2 from "../assets/boda2.jpeg";
 import Image3 from "../assets/boda3.jpeg";
 import Image4 from "../assets/boda4.jpeg";
 import Image5 from "../assets/boda5.jpeg";
+import Image6 from "../assets/boda6.jpeg";
 import { AnimatePresence, motion } from "framer-motion";
 import classNames from "classnames";
 import useIsMobile from "@/hooks/useIsMobile";
 
 const Carousel = () => {
-  const images = [Image1, Image2, Image3, Image4, Image5];
+  const images = [Image1, Image2, Image3, Image4, Image5, Image6];
   const [activeIndex, setActiveIndex] = useState(0);
   const isMobile = useIsMobile();
 
@@ -36,10 +37,10 @@ const Carousel = () => {
               "w-screen h-[500px]": isMobile,
               "object-scale-down max-h-[500px] max-w-[500px]": !isMobile,
             })}
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0.5 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1.5 }}
             loading="lazy"
           />
         </motion.div>
