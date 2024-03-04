@@ -13,6 +13,7 @@ const Hotels = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
         <div className={"font-bold  px-5 pt-5 text-2xl"}>
           {t("hotels.title")}
         </div>
+
         <div className="text-sm px-5">{t("hotels.info")}</div>
         <HotelGrid title={t("hotels.zone2")} zone={2} />
         <HotelGrid title={t("hotels.zone3")} zone={3} />
