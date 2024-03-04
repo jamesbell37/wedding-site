@@ -1,22 +1,17 @@
-import useIsMobile from "@/hooks/useIsMobile";
 import { hotels } from "@/lib/hotels";
-import classNames from "classnames";
 
 type Props = {
   title: string;
   zone: number;
 };
 const HotelGrid = ({ title, zone }: Props) => {
-  const isMobile = useIsMobile();
 
   return (
     <div className={"flex flex-col gap-3"}>
       <span className="px-5 text-xl">{title}</span>
+      <div className="overflow-scroll">
       <div
-        className={classNames(`px-1 gap-1`, {
-          "grid grid-cols-2": isMobile,
-          "grid grid-cols-6": !isMobile,
-        })}
+        className="px-1 gap-1.5 grid grid-cols-auto grid-cols-2 w-fit min-w-[350px] md:grid-cols-3 lg:grid-cols-6"
       >
         {hotels
           .filter((hotel) => hotel.zone === zone)
@@ -31,17 +26,15 @@ const HotelGrid = ({ title, zone }: Props) => {
               >
                 <img
                   src={hotel.image}
-                  className={classNames("brightness-75 rounded-lg w-full", {
-                    "h-[120px]": isMobile,
-                    "h-[150px]": !isMobile,
-                  })}
+                  className="brightness-75 rounded-lg w-52 h-[120px] md:h-[150px]"
                 />
-                <span className="absolute top-1/3 w-full text-center text-white">
+                <span className="absolute top-1/3 w-full  text-center text-white">
                   {hotel.name}
                 </span>
               </a>
             );
           })}
+      </div>
       </div>
     </div>
   );

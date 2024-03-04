@@ -7,12 +7,14 @@ const Buses = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   return (
     !isMenuOpen && (
       <div className="flex flex-col flex-1 px-5 whitespace-pre-line bg-off-white h-screen">
-        <div className="text-2xl pt-5 font-bold">{t("buses.title")}</div>
+        <div className="flex flex-col text-2xl pt-5 font-bold">{t("buses.title")}</div>
         <span>{t("buses.body")}</span>
-        <img
-          className="object-scale-down h-fit w-[30rem]  rounded-2xl"
-          src={Image}
-        />
+        <div className="max-w-sm overflow-auto">
+          <img
+            className=" object-scale-down h-fit w-[30rem] max-w-sm rounded-2xl"
+            src={Image}
+         />
+        </div>
       </div>
     )
   );

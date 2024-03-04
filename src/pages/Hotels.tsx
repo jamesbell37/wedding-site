@@ -1,11 +1,8 @@
 import { useTranslation } from "react-i18next";
-import useIsMobile from "@/hooks/useIsMobile";
 import HotelGrid from "@/components/HotelGrid";
 
 const Hotels = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   const { t } = useTranslation();
-  const isMobile = useIsMobile();
-  console.log(isMobile);
 
   return (
     !isMenuOpen && (

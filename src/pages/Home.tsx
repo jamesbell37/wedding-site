@@ -24,12 +24,18 @@ const Home = ({ isMenuOpen }: Props) => {
             <RSVPButton />
           </div>
         </div>
-        <span className={"relative max-w-[500px]"}>
+        <span
+          className={
+            "relative max-w-[500px] min-w-[300px] overflow-hidden items-center justify-center"
+          }
+        >
           <Link to={"/hotels"}>
             <img src={HotelImage} className="rounded-lg brightness-50" />
-            <span className="absolute top-1/3 right-0 left-0  text-white text-lg text-center">
-              {t("home.hotel_rec")}
-            </span>
+            <div className="absolute flex flex-col flex-shrink top-1/3 text-center w-full ">
+              <span className="relative text-white text-lg self-center w-min sm:w-full">
+                {t("home.hotel_rec")}
+              </span>
+            </div>
           </Link>
         </span>
       </main>

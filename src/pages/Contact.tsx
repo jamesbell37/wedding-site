@@ -8,11 +8,11 @@ const Contact = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
     !isMenuOpen && (
       <div
         className={
-          "relative flex flex-1 flex-col gap-10  h-fit items-center whitespace-pre-line bg-off-white h-screen"
+          "relative flex flex-1 flex-col gap-10 items-center whitespace-pre-line bg-off-white overflow-hidden"
         }
       >
         <img
-          className="object-scale-down h-fit w-[30rem] brightness-75 rounded-2xl"
+          className="object-scale-down h-fit w-[30rem] min-w-[23rem] brightness-75 rounded-2xl"
           src={Image}
         />
         <div className="absolute flex flex-col w-full self-end text-center items-center text-white">
