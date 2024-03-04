@@ -19,7 +19,7 @@ const HotelGrid = ({ title, zone }: Props) => {
             return (
               <a
                 key={index}
-                className="relative"
+                className="relative transform transition-transform duration-200 hover:scale-105"
                 target="_blank"
                 rel="noreferrer"
                 href={hotel.url}
