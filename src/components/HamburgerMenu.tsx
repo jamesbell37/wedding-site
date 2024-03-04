@@ -31,7 +31,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: Props) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="z-[100] fixed left-0 right-0 top-[1.75rem] mt-5 p-5 h-full bg-white justify-center pt-0 border-b-white/20"
+            className="z-[100] fixed left-0 right-0 top-[1.75rem] mt-9 p-5 h-full bg-white justify-center pt-0 border-b-white/20"
           >
             <ul className="grid gap-5 pt-5">
               {routes.map((route, idx) => {
