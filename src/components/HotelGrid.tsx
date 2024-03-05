@@ -11,7 +11,7 @@ const HotelGrid = ({ title, zone }: Props) => {
       <span className="px-5 text-xl">{title}</span>
       <div className="overflow-scroll">
       <div
-        className="p-1 gap-1.5 grid grid-cols-auto min-w-[150px] xs:grid-cols-2 xs:w-fit md:grid-cols-3 lg:grid-cols-6 place-content-center xs:place-content-start w-full"
+        className="p-1 gap-2 grid xs:grid-cols-2 xs:w-fit md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 justify-items-center xs:justify-items-start "
       >
         {hotels
           .filter((hotel) => hotel.zone === zone)
@@ -19,16 +19,16 @@ const HotelGrid = ({ title, zone }: Props) => {
             return (
               <a
                 key={index}
-                className="relative transform transition-transform duration-200 hover:scale-105"
+                className="relative min-w-[150px] max-w-52 md:max-w-60 transform transition-transform duration-200 hover:scale-105"
                 target="_blank"
                 rel="noreferrer"
                 href={hotel.url}
               >
                 <img
                   src={hotel.image}
-                  className="brightness-75 rounded-lg w-52 h-[120px] md:h-[150px]"
+                  className="brightness-75 rounded-lg w-52 md:w-60 h-[120px] md:h-[150px]"
                 />
-                <span className="absolute top-1/3 w-full  text-center text-white">
+                <span className="absolute top-1/3 w-full text-center text-white">
                   {hotel.name}
                 </span>
               </a>
