@@ -24,13 +24,13 @@ const Carousel = () => {
     };
   }, [nextSlide]);
   return (
-    <div className="min-w-full overflow-hidden">
+    <div className="flex flex-col min-h-fit  overflow-scroll">
       <AnimatePresence initial={false} mode="wait">
-        <motion.div className="flex min-h-[500px] min-w-max justify-center">
+        <motion.div className="flex min-h-[500px] justify-center overflow-scroll">
           <motion.img
             key={activeIndex}
             src={images[activeIndex]}
-            className="block rounded-xl md:object-scale-down max-h-[500px]"
+            className=" rounded-xl md:object-scale-down max-h-[500px] overflow-scroll"
             initial={{ opacity: 0.5 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

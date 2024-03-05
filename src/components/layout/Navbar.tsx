@@ -20,7 +20,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }: Props) => {
   return (
     <nav
       className={classNames(
-        "block xs:flex min-w-full text-center xs:text-left xs:flex-row justify-between items-center sm:px-5 px-3 py-3 sticky bg-white rounded-b-xl w-max top-0 z-[100] overflow-scroll",
+        "block xs:flex min-w-full text-center xs:text-left xs:flex-row justify-between items-center sm:px-5 px-3 py-3 sticky bg-white rounded-b-xl top-0 z-[100] overflow-scroll",
         {
           "drop-shadow-md": !isMenuOpen,
         }

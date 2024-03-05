@@ -8,7 +8,7 @@ const Gifts = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
     !isMenuOpen && (
       <div
         className={
-          "flex flex-1 flex-col gap-10 items-center whitespace-pre-line bg-off-white overflow-auto"
+          "flex flex-1 flex-col gap-10 items-center whitespace-pre-line bg-off-white overflow-hidden"
         }
       >
         <img className="relative w-screen min-w-max md:min-w-none brightness-50 overflow-visible" src={Image} />

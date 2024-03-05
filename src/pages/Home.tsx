@@ -12,9 +12,11 @@ const Home = ({ isMenuOpen }: Props) => {
 
   return (
     !isMenuOpen && (
-      <main className="flex flex-col gap-10 flex-1 pb-10 items-center whitespace-pre-line bg-off-white">
+      <main className="flex flex-col gap-10 flex-1 pb-10 items-center whitespace-pre-line bg-off-white w-full overflow-hidden">
+        <div className="flex flex-col w-max overflow-hidden">
         <Carousel />
-        <div className="flex flex-col gap-4 px-5">
+        </div>
+        <div className="flex flex-col gap-4 px-5 overflow-auto">
           <h2 className="text-center text-2xl font-semibold">
             {t("home.title")}
           </h2>
