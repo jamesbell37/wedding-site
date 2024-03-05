@@ -20,15 +20,17 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }: Props) => {
   return (
     <nav
       className={classNames(
-        "flex flex-row justify-between items-center px-5 py-3 sticky bg-white rounded-b-xl top-0 z-[100]",
+        "block xs:flex min-w-full text-center xs:text-left xs:flex-row justify-between items-center sm:px-5 px-3 py-3 sticky bg-white rounded-b-xl w-max top-0 z-[100] overflow-scroll",
         {
           "drop-shadow-md": !isMenuOpen,
         }
       )}
     >
-      <Link to={"/"} className={"text-2xl font-extrabold"}>
+      
+      <Link to={"/"} className={"self-center min-w-max text-center place-content-center  text-xl sm:text-2xl font-extrabold"}>
         Cris & Richi
       </Link>
+      
       <div className="flex flex-row gap-4">
         <select defaultValue={"es"} onChange={onChangeLang}>
           {LANGUAGES.map(({ code, label }) => (
