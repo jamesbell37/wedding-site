@@ -71,7 +71,7 @@
     @apply border-border;
   }
   #root{
-    @apply flex flex-col h-screen;
+    @apply flex flex-col min-h-screen;
   }
   body {
     @apply bg-background text-foreground;
