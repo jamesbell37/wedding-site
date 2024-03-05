@@ -11,9 +11,6 @@ module.exports = {
   ],
   prefix: "",
   theme: {
-    screens:{
-      'xs': '350px',
-    },
     container: {
       center: true,
       padding: "2rem",
@@ -79,6 +76,9 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      screens:{
+        'xs': '350px',
       },
     },
   },
