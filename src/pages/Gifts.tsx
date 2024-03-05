@@ -11,7 +11,7 @@ const Gifts = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
           "flex flex-1 flex-col gap-10 items-center whitespace-pre-line bg-off-white overflow-hidden"
         }
       >
-        <img className="relative w-screen min-w-max md:min-w-none brightness-50 overflow-visible" src={Image} />
+        <img className="relative w-screen min-w-max brightness-50 overflow-visible" src={Image} />
         <div className="absolute flex flex-col w-full self-end text-center items-center text-white pt-5 top-1/4">
           <div
             className="text-sm pb-5 w-fit px-8 md:w-1/2"
