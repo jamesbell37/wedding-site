@@ -1,7 +1,6 @@
 // import React from "react";
 import Image from "../assets/iglesia.png";
 import { useTranslation } from "react-i18next";
-import classNames from 'classnames';
 
 const Church = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   const { t } = useTranslation();
