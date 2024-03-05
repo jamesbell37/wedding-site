@@ -11,7 +11,7 @@ const HotelGrid = ({ title, zone }: Props) => {
       <span className="px-5 text-xl">{title}</span>
       <div className="overflow-scroll">
       <div
-        className="px-1 gap-1.5 grid grid-cols-auto grid-cols-2 w-fit min-w-[350px] md:grid-cols-3 lg:grid-cols-6 m-1"
+        className="p-1 gap-1.5 grid grid-cols-auto min-w-[150px] xs:grid-cols-2 xs:w-fit md:grid-cols-3 lg:grid-cols-6 place-content-center xs:place-content-start w-full"
       >
         {hotels
           .filter((hotel) => hotel.zone === zone)
