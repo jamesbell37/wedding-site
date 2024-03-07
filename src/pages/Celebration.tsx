@@ -34,7 +34,7 @@ const Celebration = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
             </span>
           </div>
         </div>
-        <div className="xs:grid w-full h-full overflow-scroll place-content-center">
+        <div className="xs:grid w-full overflow-scroll place-content-center">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2902.898308291007!2d-3.95781682384094!3d43.316388171120174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd493bb748468273%3A0x7c21c879f46bb6ae!2sFinca%20de%20San%20Juan%20Hoster%C3%ADa%20%26%20Catering!5e0!3m2!1sen!2ses!4v1708341899558!5m2!1sen!2ses"
             loading="lazy"
