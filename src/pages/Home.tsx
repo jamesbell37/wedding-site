@@ -12,9 +12,11 @@ const Home = ({ isMenuOpen }: Props) => {
 
   return (
     !isMenuOpen && (
-      <main className="flex flex-col gap-10 flex-1 pb-10 items-center whitespace-pre-line bg-off-white">
+      <main className="flex flex-col gap-10 flex-1 pb-10 items-center whitespace-pre-line bg-off-white w-full overflow-hidden">
+        <div className="flex flex-col w-max overflow-hidden">
         <Carousel />
-        <div className="flex flex-col gap-4 px-5">
+        </div>
+        <div className="flex flex-col gap-4 px-5 overflow-auto">
           <h2 className="text-center text-2xl font-semibold">
             {t("home.title")}
           </h2>
@@ -24,12 +26,18 @@ const Home = ({ isMenuOpen }: Props) => {
             <RSVPButton />
           </div>
         </div>
-        <span className={"relative max-w-[500px]"}>
+        <span
+          className={
+            "relative max-w-[500px] min-w-[300px] overflow-hidden items-center justify-center"
+          }
+        >
           <Link to={"/hotels"}>
             <img src={HotelImage} className="rounded-lg brightness-50" />
-            <span className="absolute top-1/3 right-0 left-0  text-white text-lg text-center">
-              {t("home.hotel_rec")}
-            </span>
+            <div className="absolute flex flex-col flex-shrink top-1/3 text-center w-full ">
+              <span className="relative text-white text-lg self-center w-min sm:w-full">
+                {t("home.hotel_rec")}
+              </span>
+            </div>
           </Link>
         </span>
       </main>

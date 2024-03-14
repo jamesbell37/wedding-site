@@ -1,26 +1,20 @@
 // import React from "react";
-import classNames from "classnames";
 import Image from "../assets/gifts.jpeg";
 import { useTranslation } from "react-i18next";
-import useIsMobile from "@/hooks/useIsMobile";
 
 const Gifts = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   const { t } = useTranslation();
-  const isMobile = useIsMobile();
   return (
     !isMenuOpen && (
       <div
         className={
-          "flex flex-1 flex-col gap-10  h-fit items-center whitespace-pre-line bg-off-white h-screen"
+          "flex flex-1 flex-col gap-10 items-center whitespace-pre-line bg-off-white overflow-hidden"
         }
       >
-        <img className="relative w-screen brightness-50 " src={Image} />
+        <img className="relative w-screen min-w-max brightness-50 overflow-visible" src={Image} />
         <div className="absolute flex flex-col w-full self-end text-center items-center text-white pt-5 top-1/4">
           <div
-            className={classNames("text-sm pb-5", {
-              "w-1/2": !isMobile,
-              "w-fit px-8": isMobile,
-            })}
+            className="text-sm pb-5 w-fit px-8 md:w-1/2"
           >
             {t("gifts.title")}
           </div>

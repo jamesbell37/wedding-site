@@ -6,13 +6,10 @@ import Image4 from "../assets/boda4.jpeg";
 import Image5 from "../assets/boda5.jpeg";
 import Image6 from "../assets/boda6.jpeg";
 import { AnimatePresence, motion } from "framer-motion";
-import classNames from "classnames";
-import useIsMobile from "@/hooks/useIsMobile";
 
 const Carousel = () => {
   const images = [Image1, Image2, Image3, Image4, Image5, Image6];
   const [activeIndex, setActiveIndex] = useState(0);
-  const isMobile = useIsMobile();
 
   const nextSlide = useCallback(() => {
     setActiveIndex((prevIndex) =>
@@ -27,16 +24,13 @@ const Carousel = () => {
     };
   }, [nextSlide]);
   return (
-    <div className="max-w-full overflow-hidden">
+    <div className="flex flex-col min-h-fit  overflow-scroll">
       <AnimatePresence initial={false} mode="wait">
-        <motion.div className="flex min-h-[500px] justify-center">
+        <motion.div className="flex min-h-[500px] justify-center overflow-scroll">
           <motion.img
             key={activeIndex}
             src={images[activeIndex]}
-            className={classNames("block rounded-xl", {
-              "w-screen h-[500px]": isMobile,
-              "object-scale-down max-h-[500px] max-w-[500px]": !isMobile,
-            })}
+            className=" rounded-xl md:object-scale-down max-h-[500px] overflow-scroll"
             initial={{ opacity: 0.5 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

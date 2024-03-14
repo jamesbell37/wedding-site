@@ -1,15 +1,12 @@
 import { useTranslation } from "react-i18next";
-import useIsMobile from "@/hooks/useIsMobile";
 import HotelGrid from "@/components/HotelGrid";
 
 const Hotels = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   const { t } = useTranslation();
-  const isMobile = useIsMobile();
-  console.log(isMobile);
 
   return (
     !isMenuOpen && (
-      <div className="flex flex-col flex-1 gap-5 bg-off-white h-screen">
+      <div className="flex flex-col flex-1 gap-5 bg-off-white">
         <div className={"font-bold  px-5 pt-5 text-2xl"}>
           {t("hotels.title")}
         </div>

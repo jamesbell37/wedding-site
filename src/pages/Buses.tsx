@@ -6,13 +6,15 @@ const Buses = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   const { t } = useTranslation();
   return (
     !isMenuOpen && (
-      <div className="flex flex-col flex-1 px-5 whitespace-pre-line bg-off-white h-screen">
+      <div className="flex flex-col flex-1 px-5 whitespace-pre-line bg-off-white">
         <div className="text-2xl pt-5 font-bold">{t("buses.title")}</div>
         <span>{t("buses.body")}</span>
-        <img
-          className="object-scale-down h-fit w-[30rem]  rounded-2xl"
-          src={Image}
-        />
+        <div className="overflow-auto">
+          <img
+            className="min-w-[25rem] xs:min-w-0 object-scale-down w-[30rem] rounded-2xl"
+            src={Image}
+         />
+        </div>
       </div>
     )
   );
