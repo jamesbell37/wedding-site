@@ -68,7 +68,7 @@ const hotels = [
     zone: 2,
     url: "https://www.vinccipuertochico.com/",
     image:
-      "https://www.vinccihoteles.com/sites/default/files/styles/large/public/archivos%20destacados%20hotel/vincci-puertochico-santander_2.jpg?itok=sNefOtpr",
+      "https://www.vinccipuertochico.com/uploads/galeriahoteles/desayuno-vincci-puertochico.jpg",
   },
   {
     name: "Hotel Abba Santander",
